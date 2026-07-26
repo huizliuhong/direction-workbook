@@ -1105,13 +1105,10 @@
       <div style="font-size:15px;font-weight:600;color:#333;margin-bottom:6px;">本工作簿为付费内容</div>
       <div style="font-size:28px;font-weight:700;color:#e74c3c;margin-bottom:14px;">69 元</div>
       <div style="font-size:13px;color:#888;margin-bottom:18px;line-height:1.6;">微信扫码付款后<br>点击下方按钮获取提取码</div>
-      <!-- 微信收款码——替换为自己的收款码图片URL -->
-      <div id="qr-placeholder" style="width:160px;height:160px;margin:0 auto 16px;background:#f9f9f9;border:1px dashed #d0d0d0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:13px;cursor:pointer;" onclick="document.getElementById('qr-reveal').style.display='block';document.getElementById('qr-placeholder').style.display='none';">
-        上传你的微信收款码<br>（替换此区域）
-      </div>
-      <div id="qr-reveal" style="display:none;margin-bottom:16px;">
-        <img src="" alt="微信收款码" style="width:160px;height:160px;border-radius:8px;object-fit:contain;" onerror="this.parentElement.style.display='none';document.getElementById('qr-placeholder').style.display='block';">
-        <div style="font-size:11px;color:#bbb;margin-top:6px;">请用微信扫码支付 69 元</div>
+      <!-- 微信收款码 -->
+      <div style="margin-bottom:16px;">
+        <img src="wechat-pay-qr.jpg" alt="微信收款码" style="width:180px;height:180px;border-radius:8px;object-fit:contain;border:1px solid #f0f0f0;background:#fff;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\\'width:180px;height:180px;margin:0 auto;background:#f9f9f9;border:1px dashed #d0d0d0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:13px;\\'>收款码加载失败</div>'">
+        <div style="font-size:11px;color:#bbb;margin-top:8px;">请用微信扫码支付 69 元</div>
       </div>
       <button id="reveal-code-btn" style="width:100%;padding:12px 20px;font-size:14px;border:none;border-radius:24px;background:linear-gradient(135deg,#ff6b6b,#e74c3c);color:#fff;font-weight:500;cursor:pointer;transition:opacity 0.2s;box-shadow:0 4px 12px rgba(231,76,60,0.25);" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">我已付款，查看提取码</button>
       <div id="code-reveal" style="display:none;margin-top:16px;padding:14px;background:#f0f9f0;border-radius:10px;">
